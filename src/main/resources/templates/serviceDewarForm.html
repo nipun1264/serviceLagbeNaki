@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ; 
+		   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>serviceDewarForm</title>
+    <style>
+        /* Add some basic styles for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-group input[type="number"] {
+            width: 50px;
+        }
+        
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Looking For Job?</h2>
+        <form action="job_khujci" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="serviceProvider_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="serviceProvider_mobile" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="serviceProvider_address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Time Duration( From ):</label>
+                <input type="number" id="hours" name="serviceProvider_start_hours" min="0" max="23" required>
+                <span>hours</span>
+                <input type="number" id="minutes" name="serviceProvider_start_minute" min="0" max="59" required>
+                <span>minutes</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Time Duration( To ):</label>
+                <input type="number" id="hours" name="serviceProvider_end_hours" min="0" max="23" required>
+                <span>hours</span>
+                <input type="number" id="minutes" name="serviceProvider_end_minute" min="0" max="59" required>
+                <span>minutes</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="amount">Expected Payment</label>
+                <input type="number" id="amount" name="serviceProvider_expectedPayment" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
